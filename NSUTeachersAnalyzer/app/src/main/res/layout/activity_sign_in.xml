@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/appNameLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/app_name_label"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameLabelTextView">
+
+        <EditText
+            android:id="@+id/email_edit_text_signIn"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/email_hint_text"
+            android:inputType="textEmailAddress"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/password_edit_text_signIn"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/password_hint_text"
+            android:inputType="textPassword"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/error_textViewSignIn"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FB0000"
+            android:visibility="gone"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button_logIn"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/button_logIn_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/signIn_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_image"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:visibility="visible"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/appNameLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/app_name_label"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameLabelTextView">
+
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/name_hint_text"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/surname_editText"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/surname_hint_text"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/thirdname_editText"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/thirdName_hint_text"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="350dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/job_title_layout_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:id="@+id/jobLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:hint="@string/job_title_hint_text"
+                    android:textColorHint="@color/gray" />
+
+                <ImageButton
+                    android:id="@+id/drop_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="dropJobTitles"
+                    android:rotation="0"
+                    app:srcCompat="@android:drawable/arrow_down_float"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/job_titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:orientation="vertical"
+                android:paddingLeft="3dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="50dp">
+
+                <TextView
+                    android:id="@+id/teacher_job_title"
+                    android:layout_width="344dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/job_titles_text_view_background"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:padding="0dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/teacher_job_title"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/student_job_title"
+                    android:layout_width="344dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/job_titles_text_view_background"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:padding="0dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/student_job_title"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/email_editText_SignUp"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/email_hint_text"
+            android:inputType="textEmailAddress"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/password_editText_SignUp"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/password_hint_text"
+            android:inputType="textPassword"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/password_confirm_editText_SignUp"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edit_text"
+            android:ems="10"
+            android:hint="@string/password_confirmation_hint_text"
+            android:inputType="textPassword"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/error_textView_SignUp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FB0000"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_data_signUp"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/button_signUp_text"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/signUp_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_image"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NSUTeachersAnalyzer</string>
+    <string name="app_name_label">NSU TEACHERS ANALYZER</string>
+    <string name="button_signIn_text">Войти</string>
+    <string name="button_signUp_text">Зарегистрироваться</string>
+    <string name="button_logIn_text">Авторизоваться</string>
+    <string name="surname_hint_text">Введите фамилию</string>
+    <string name="name_hint_text">Введите имя</string>
+    <string name="thirdName_hint_text">Введите отчество</string>
+    <string name="job_title_hint_text">Должность</string>
+    <string name="email_hint_text">Введите E-mail</string>
+    <string name="password_hint_text">Введите пароль</string>
+    <string name="password_confirmation_hint_text">Подтверждение пароля</string>
+    <string name="teacher_job_title">Преподаватель</string>
+    <string name="student_job_title">Студент</string>
+    <string name="teachers_list_label">Список преподавателей</string>
+</resources>
